@@ -8,10 +8,7 @@ import {ElectronService} from 'ngx-electron';
 })
 export class AppComponent implements OnInit{
   title = 'AngularAndForge';
-  start: number;
-  end: number;
   constructor(private electronService: ElectronService) {
-    this.start = (new Date()).getMilliseconds();
   }
 
   ngOnInit(): void {
@@ -27,8 +24,6 @@ export class AppComponent implements OnInit{
       // this.electronService.ipcRenderer.on('vmchecker-async-result', (event, args) => {
       //   console.log('isVm async', args);
       // });
-      this.end = (new Date()).getMilliseconds();
-      console.log('Diff', this.end - this.start);
     }
   }
 }
